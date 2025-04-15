@@ -1,35 +1,47 @@
 "use client";
-import Link from "next/link";
 import React from "react";
 import Google from "/public/images/svgs/google-icon.svg";
-import FB from "/public/images/svgs/facebook-icon.svg";
+import Git from "/public/images/svgs/git-icon.svg";
 import Image from "next/image";
-import { HR } from "flowbite-react";
+import { Button, HR } from "flowbite-react";
+import { signInType } from "@/app/(DashboardLayout)/types/auth/auth";
+import { signIn } from "next-auth/react";
 
 interface MyAppProps {
-    title?:string;
-  }
+  title?: string;
+}
 
-const SocialButtons: React.FC<MyAppProps> = ({ title }) => {
+const SocialButtons: React.FC<MyAppProps> = ({ title }: signInType) => {
+  const handleGoogleSignIn = async () => {
+    await signIn("google");
+  };
+  const handleGithubSignIn = async () => {
+    await signIn("github");
+  };
   return (
     <>
       <div className="flex justify-between gap-8 my-6 ">
-        <Link
-          href={"/"}
-          className="px-4 py-2.5 border border-ld flex gap-2 items-enter w-full rounded-md text-center justify-center text-ld text-primary-ld"
+        <Button
+          color={"transparent"}
+          onClick={handleGoogleSignIn}
+          className="border border-ld flex gap-2 items-enter w-full rounded-md text-center justify-center  hover:bg-transparent !h-11 font-normal text-ld"
         >
-          <Image src={Google} alt="google" height={18} width={18} /> Google
-        </Link>
-        <Link
-          href={"/"}
-          className="px-4 py-2.5 border border-ld flex gap-2 items-enter w-full rounded-md text-center justify-center text-ld text-primary-ld"
+          <Image src={Google} alt="google" height={18} width={18} /> With Google
+        </Button>
+        <Button
+          color={"transparent"}
+          onClick={handleGithubSignIn}
+          className="border border-ld flex gap-2 items-enter w-full rounded-md text-center justify-center hover:bg-transparent !h-11 font-normal text-ld"
         >
-          <Image src={FB} alt="google" height={18} width={18} />
-          Facebook
-        </Link>
+          <Image src={Git} alt="google" height={18} width={18} />
+          With Github
+        </Button>
       </div>
       {/* Divider */}
-      <HR.Text text={`${title}`} className="!border-t !border-ld !bg-transparent" />
+      <HR.Text
+        text={`${title}`}
+        className="!border-t !border-ld !bg-transparent"
+      />
     </>
   );
 };

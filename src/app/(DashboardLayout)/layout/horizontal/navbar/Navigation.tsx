@@ -45,7 +45,7 @@ const Navigation = () => {
                     <Link href={item.href}>
                       <span className="flex gap-2 items-center w-full ">
                         <Icon icon={`${item.icon}`} height={18} />
-                        <span>{item.title}</span>
+                        <span>{t(`${item.title}`)}</span>
                         {item.children && <IconChevronDown size={18} className='ms-auto' />}
                       </span>
                     </Link>

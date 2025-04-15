@@ -3,7 +3,8 @@ import { CustomizerContext } from "@/app/context/customizerContext";
 
 import { Card } from "flowbite-react";
 import { title } from "process";
-import React, { useContext } from "react";
+import React from "react";
+import { createContext } from "vm";
 
 interface MyAppProps {
   children: React.ReactNode;
@@ -11,18 +12,13 @@ interface MyAppProps {
   title?: string;
 }
 const TitleCard: React.FC<MyAppProps> = ({ children, className, title }) => {
-  const { activeMode, isCardShadow, isBorderRadius } =
-    useContext(CustomizerContext);
+  const { activeMode, isCardShadow } = createContext(CustomizerContext);
   return (
     <Card
-      className={`card ${className} ${
-        isCardShadow
-          ? "dark:shadow-dark-md shadow-md p-0"
-          : "shadow-none border border-ld p-0"
-      } `}
-      style={{
-        borderRadius: `${isBorderRadius}px`,
-      }}
+      className={`card ${className} ${isCardShadow
+        ? "dark:shadow-dark-md shadow-md p-0"
+        : "shadow-none border border-ld p-0"
+        } `}
     >
       <div className="border-b border-ld px-6 py-4">
         <h5 className="card-title">{title}</h5>

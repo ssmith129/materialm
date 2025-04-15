@@ -34,7 +34,7 @@ const ChildComponent = ({ item, isActive, handleMouseEnter, handleMouseLeave, on
 
                     <span className='flex gap-3 items-center w-full'>
                         <Icon icon={`${item.icon}`} height={18} />
-                        <span className='line-clamp-1 max-w-24 overflow-hidden'>{t(`${item.title}`)}</span>
+                        <span>{t(`${item.title}`)}</span>
                         {item.children && <IconChevronDown size={18} className='ms-auto' />}
                     </span>
                 </p>
@@ -72,4 +72,10 @@ const ChildComponent = ({ item, isActive, handleMouseEnter, handleMouseLeave, on
 };
 
 export default ChildComponent;
+
+
+
+
+
+
 

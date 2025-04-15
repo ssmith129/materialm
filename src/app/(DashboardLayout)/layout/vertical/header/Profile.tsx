@@ -4,8 +4,10 @@ import React from "react";
 import * as profileData from "./Data";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession, signOut } from "next-auth/react";
 import SimpleBar from "simplebar-react";
 const Profile = () => {
+  const { data: session } = useSession();
   return (
     <div className="relative group/menu">
       <Dropdown
@@ -35,7 +37,7 @@ const Profile = () => {
               className="rounded-full"
             />
             <div>
-              <h5 className="card-title">Jonathan Deo</h5>
+              <h5 className="card-title">{session?.user?.name}</h5>
               <span className="card-subtitle">Admin</span>
               <p className="card-subtitle mb-0 mt-1 flex items-center">
                 <Icon
@@ -47,11 +49,12 @@ const Profile = () => {
             </div>
           </div>
         </div>
+
         <SimpleBar>
         {profileData.profileDD.map((items, index) => (
           <Dropdown.Item
             as={Link}
-            href={items.url}
+            href="#"
             className="px-6 py-3 flex justify-between items-center bg-hover group/link w-full"
             key={index}
           >
@@ -80,6 +83,7 @@ const Profile = () => {
             as={Link}
             href="/auth/auth1/login"
             className="w-full"
+            onClick={() => signOut()}
           >
             Logout
           </Button>

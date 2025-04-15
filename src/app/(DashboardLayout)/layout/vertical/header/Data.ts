@@ -1,5 +1,3 @@
-
-
 //Apps Links Type & Data
 interface appsLinkType {
   href: string;
@@ -10,49 +8,49 @@ interface appsLinkType {
 
 const appsLink: appsLinkType[] = [
   {
-    href: "/apps/chats",
+    href: "/",
     title: "Chat Application",
     subtext: "New messages arrived",
     avatar: "/images/svgs/icon-dd-chat.svg",
   },
   {
-    href: "/apps/ecommerce/shop",
+    href: "/",
     title: "eCommerce App",
     subtext: "New stock available",
     avatar: "/images/svgs/icon-dd-cart.svg",
   },
   {
-    href: "/apps/notes",
+    href: "/",
     title: "Notes App",
     subtext: "To-do and Daily tasks",
     avatar: "/images/svgs/icon-dd-invoice.svg",
   },
   {
-    href: "/apps/calendar",
+    href: "/",
     title: "Calendar App",
     subtext: "Get dates",
     avatar: "/images/svgs/icon-dd-date.svg",
   },
   {
-    href: "/apps/contacts",
+    href: "/",
     title: "Contact Application",
     subtext: "2 Unsaved Contacts",
     avatar: "/images/svgs/icon-dd-mobile.svg",
   },
   {
-    href: "/apps/tickets",
+    href: "/",
     title: "Tickets App",
     subtext: "Submit tickets",
     avatar: "/images/svgs/icon-dd-lifebuoy.svg",
   },
   {
-    href: "/apps/email",
+    href: "/",
     title: "Email App",
     subtext: "Get new emails",
     avatar: "/images/svgs/icon-dd-message-box.svg",
   },
   {
-    href: "/apps/blog/post",
+    href: "/",
     title: "Blog App",
     subtext: "added new blog",
     avatar: "/images/svgs/icon-dd-application.svg",
@@ -66,35 +64,35 @@ interface LinkType {
 
 const pageLinks: LinkType[] = [
   {
-    href: "/theme-pages/pricing",
+    href: "",
     title: "Pricing Page",
   },
   {
-    href: "/auth/auth1/login",
+    href: "",
     title: "Authentication Design",
   },
   {
-    href: "/auth/auth1/register",
+    href: "",
     title: "Register Now",
   },
   {
-    href: "/404",
+    href: "",
     title: "404 Error Page",
   },
   {
-    href: "/apps/kanban",
+    href: "",
     title: "Kanban App",
   },
   {
-    href: "/apps/user-profile/profile",
+    href: "",
     title: "User Application",
   },
   {
-    href: "/apps/blog/post",
+    href: "",
     title: "Blog Design",
   },
   {
-    href: "/apps/ecommerce/checkout",
+    href: "",
     title: "Shopping Cart",
   },
 ];
@@ -191,7 +189,7 @@ interface NotificationType {
   icon: any;
   subtitle: string;
   bgcolor: string;
-  color:string;
+  color: string;
   time: string;
 }
 
@@ -199,7 +197,7 @@ const Notification: NotificationType[] = [
   {
     icon: "solar:widget-3-line-duotone",
     bgcolor: "bg-lighterror dark:bg-lighterror",
-    color:'text-error',
+    color: "text-error",
     title: "Launch Admin",
     subtitle: "Just see the my new admin!",
     time: "9:30 AM",
@@ -207,7 +205,7 @@ const Notification: NotificationType[] = [
   {
     icon: "solar:calendar-line-duotone",
     bgcolor: "bg-lightprimary dark:bg-lightprimary",
-    color:'text-primary',
+    color: "text-primary",
     title: "Event Today",
     subtitle: "Just a reminder that you have event",
     time: "9:15 AM",
@@ -215,7 +213,7 @@ const Notification: NotificationType[] = [
   {
     icon: "solar:settings-line-duotone",
     bgcolor: "bg-lightsecondary dark:bg-lightsecondary",
-    color:'text-secondary',
+    color: "text-secondary",
     title: "Settings",
     subtitle: "You can customize this template as you want",
     time: "4:36 PM",
@@ -223,7 +221,7 @@ const Notification: NotificationType[] = [
   {
     icon: "solar:widget-4-line-duotone",
     bgcolor: "bg-lightwarning dark:bg-lightwarning ",
-    color:'text-warning',
+    color: "text-warning",
     title: "Launch Admin",
     subtitle: "Just see the my new admin!",
     time: "9:30 AM",
@@ -231,7 +229,7 @@ const Notification: NotificationType[] = [
   {
     icon: "solar:calendar-line-duotone",
     bgcolor: "bg-lightprimary dark:bg-lightprimary",
-    color:'text-primary',
+    color: "text-primary",
     title: "Event Today",
     subtitle: "Just a reminder that you have event",
     time: "9:15 AM",
@@ -239,7 +237,7 @@ const Notification: NotificationType[] = [
   {
     icon: "solar:settings-line-duotone",
     bgcolor: "bg-lightsecondary dark:bg-lightsecondary",
-    color:'text-secondary',
+    color: "text-secondary",
     title: "Settings",
     subtitle: "You can customize this template as you want",
     time: "4:36 PM",
@@ -263,7 +261,7 @@ const profileDD: ProfileType[] = [
     color: "text-primary",
     title: "My Profile",
     subtitle: "Account settings",
-    url: "/apps/user-profile/profile",
+    url: "",
   },
   {
     icon: "solar:inbox-line-duotone",
@@ -271,7 +269,7 @@ const profileDD: ProfileType[] = [
     bgcolor: "bg-lightsuccess dark:bg-lightsuccess",
     title: "My Notes",
     subtitle: "My Daily Notes",
-    url: "/apps/notes",
+    url: "",
   },
   {
     icon: "solar:checklist-minimalistic-line-duotone",
@@ -279,7 +277,7 @@ const profileDD: ProfileType[] = [
     bgcolor: "bg-lighterror dark:bg-lighterror",
     title: "My Tasks",
     subtitle: "To-do and Daily tasks",
-    url: "/apps/kanban",
+    url: "",
   },
 ];
 

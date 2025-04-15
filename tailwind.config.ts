@@ -1,12 +1,11 @@
 import type { Config } from "tailwindcss";
 import flowbite from "flowbite-react/tailwind";
 const config: Config = {
-  darkMode: "class",
+  darkMode: 'class',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-
     // Flowbite content
     flowbite.content(),
   ],
@@ -30,15 +29,11 @@ const config: Config = {
         center: true,
         padding: "30px",
       },
-      gap: {
-        "30": "30px",
+      padding:{
+        "30":"30px"
       },
-      padding: {
-        "30": "30px",
-      },
-      margin: {
-        "30": "30px",
-      },
+
+
 
       colors: {
         cyan: {
@@ -76,15 +71,13 @@ const config: Config = {
         warningemphasis: "var(--color-warning-emphasis)",
         erroremphasis: "var(--color-error-emphasis)",
         successemphasis: "var(--color-success-emphasis)",
-        infoemphasis: "var(--color-info-emphasis)",
         darkmuted: "var( --color-darkmuted)",
       },
     },
   },
   plugins: [
     //Add Flowbite Plugin
-
-    require("flowbite/plugin"),
+    require("flowbite/plugin")
   ],
 };
 export default config;
