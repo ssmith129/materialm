@@ -1,14 +1,13 @@
 "use client";
 import React, { useContext } from "react";
 import { Sidebar } from "flowbite-react";
-import { IconSidebar } from "./IconSidebar";
 import SidebarContent from "./Sidebaritems";
 import NavItems from "./NavItems";
 import NavCollapse from "./NavCollapse";
 import { CustomizerContext } from "@/app/context/customizerContext";
 import SimpleBar from "simplebar-react";
-import SideProfile from "./SideProfile/SideProfile";
-
+import FullLogo from "../../shared/logo/FullLogo";
+import { Icon } from "@iconify/react";
 const MobileSidebar = () => {
   const { selectedIconId, setSelectedIconId } = useContext(CustomizerContext) || {};
   const selectedContent = SidebarContent.find(
@@ -16,28 +15,35 @@ const MobileSidebar = () => {
   );
   return (
     <>
-      <div>
-        <div className="minisidebar-icon border-e border-ld bg-white dark:bg-darkgray fixed start-0 z-[1] ">
-          <IconSidebar />
-          <SideProfile/>
-        </div>
-        <Sidebar
-          className="fixed menu-sidebar pt-8 bg-white dark:bg-darkgray transition-all"
-          aria-label="Sidebar with multi-level dropdown example"
-        >
-          <SimpleBar className="h-[calc(100vh_-_85px)]">
-            <Sidebar.Items className="ps-4 pe-4">
-              <Sidebar.ItemGroup className="sidebar-nav">
-                {selectedContent &&
-                  selectedContent.items?.map((item, index) => (
+     <div className="flex">
+          <Sidebar
+            className="fixed menu-sidebar pt-6 bg-white dark:bg-darkgray z-[10]"
+            aria-label="Sidebar with multi-level dropdown example"
+          >
+            <div className="mb-7 px-4 brand-logo">
+              <FullLogo />
+            </div>
+
+            <SimpleBar className="h-[calc(100vh_-_85px)]">
+              <Sidebar.Items className="px-4">
+                <Sidebar.ItemGroup className="sidebar-nav">
+                  {SidebarContent.map((item, index) => (
                     <React.Fragment key={index}>
                       <h5 className="text-link font-semibold text-sm caption">
-                        {item.heading}
+                        <span className="hide-menu">{item.heading}</span>
                       </h5>
+                      <Icon
+                        icon="solar:menu-dots-bold"
+                        className="text-ld block mx-auto mt-6 leading-6 dark:text-opacity-60 hide-icon"
+                        height={18}
+                      />
+
                       {item.children?.map((child, index) => (
                         <React.Fragment key={child.id && index}>
                           {child.children ? (
-                            <NavCollapse item={child} />
+                            <div className="collpase-items">
+                              <NavCollapse item={child} />
+                            </div>
                           ) : (
                             <NavItems item={child} />
                           )}
@@ -45,11 +51,11 @@ const MobileSidebar = () => {
                       ))}
                     </React.Fragment>
                   ))}
-              </Sidebar.ItemGroup>
-            </Sidebar.Items>
-          </SimpleBar>
-        </Sidebar>
-      </div>
+                </Sidebar.ItemGroup>
+              </Sidebar.Items>
+            </SimpleBar>
+          </Sidebar>
+        </div>
     </>
   );
 };

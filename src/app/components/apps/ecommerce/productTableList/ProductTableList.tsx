@@ -432,7 +432,7 @@ const ProductTablelist = () => {
                     id="dt"
                   />
                 </div>
-                <div className="col-span-12">
+                <div className="col-span-12  lg:col-span-6">
                   <Label
                     htmlFor="img"
                     value="Image URL"

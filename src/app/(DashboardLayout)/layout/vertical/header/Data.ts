@@ -78,7 +78,7 @@ const pageLinks: LinkType[] = [
     title: "Register Now",
   },
   {
-    href: "/auth/error",
+    href: "/404",
     title: "404 Error Page",
   },
   {

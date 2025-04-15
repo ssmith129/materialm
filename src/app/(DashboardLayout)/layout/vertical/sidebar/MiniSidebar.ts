@@ -19,7 +19,7 @@ const Miniicons: MiniiconsType[] = [
   {
     id: 3,
     icon: "solar:palette-round-line-duotone",
-    tooltip: "Ui Components",
+    tooltip: "Forms",
   },
   {
     id: 4,
@@ -34,20 +34,15 @@ const Miniicons: MiniiconsType[] = [
   {
     id: 6,
     icon: "solar:widget-6-line-duotone",
-    tooltip: "Forms",
+    tooltip: "Ui Components",
   },
   {
     id: 7,
-    icon: "solar:text-underline-cross-broken",
-    tooltip: "Headless UI",
-  },
-  {
-    id: 8,
     icon: "solar:lock-keyhole-line-duotone",
     tooltip: "Authentiction Pages",
   },
   {
-    id: 9,
+    id: 8,
     icon: "solar:mirror-left-line-duotone",
     tooltip: "Docs & Others",
   },

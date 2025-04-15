@@ -1,48 +1,46 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 import { Sidebar } from "flowbite-react";
-import { IconSidebar } from "./IconSidebar";
 import SidebarContent from "./Sidebaritems";
 import NavItems from "./NavItems";
 import NavCollapse from "./NavCollapse";
-import { CustomizerContext } from "@/app/context/customizerContext";
 import SimpleBar from "simplebar-react";
-import SideProfile from "./SideProfile/SideProfile";
-
+import FullLogo from "../../shared/logo/FullLogo";
+import { Icon } from "@iconify/react";
 const SidebarLayout = () => {
-  const { selectedIconId, setSelectedIconId } = useContext(CustomizerContext) || {};
-  const selectedContent = SidebarContent.find(
-    (data) => data.id === selectedIconId
-  );
-
   return (
     <>
       <div className="xl:block hidden">
+        <div className="flex">
+          <Sidebar
+            className="fixed menu-sidebar pt-6 bg-white dark:bg-darkgray z-[10]"
+            aria-label="Sidebar with multi-level dropdown example"
+          >
+            <div className="mb-7 px-4 brand-logo">
+              <FullLogo />
+            </div>
 
-        <div className="minisidebar-icon border-e border-ld bg-white dark:bg-darkgray fixed start-0 z-[1]">
-          <IconSidebar />
-          <SideProfile />
-        </div>
-        <Sidebar
-          className="fixed menu-sidebar pt-8 bg-white dark:bg-darkgray ps-4 rtl:pe-4 rtl:ps-0"
-          aria-label="Sidebar with multi-level dropdown example"
-
-        >
-
-          <SimpleBar className="h-[calc(100vh_-_85px)]">
-            <Sidebar.Items className="pe-4 rtl:pe-0 rtl:ps-4">
-              <Sidebar.ItemGroup className="sidebar-nav hide-menu ">
-                {selectedContent &&
-                  selectedContent.items?.map((item, index) => (
+            <SimpleBar className="h-[calc(100vh_-_85px)]">
+              <Sidebar.Items className="px-4">
+                <Sidebar.ItemGroup className="sidebar-nav">
+                  {SidebarContent.map((item, index) => (
                     <React.Fragment key={index}>
-                      <h5 className="text-link font-semibold text-sm caption ">
-                        {item.heading}
+                      <h5 className="text-link font-semibold text-sm caption">
+                        <span className="hide-menu">{item.heading}</span>
                       </h5>
+                      <Icon
+                        icon="solar:menu-dots-bold"
+                        className="text-ld block mx-auto mt-6 leading-6 dark:text-opacity-60 hide-icon"
+                        height={18}
+                      />
+
                       {item.children?.map((child, index) => (
                         <React.Fragment key={child.id && index}>
                           {child.children ? (
-                            <NavCollapse item={child} />
+                            <div className="collpase-items">
+                              <NavCollapse item={child} />
+                            </div>
                           ) : (
                             <NavItems item={child} />
                           )}
@@ -50,10 +48,11 @@ const SidebarLayout = () => {
                       ))}
                     </React.Fragment>
                   ))}
-              </Sidebar.ItemGroup>
-            </Sidebar.Items>
-          </SimpleBar>
-        </Sidebar>
+                </Sidebar.ItemGroup>
+              </Sidebar.Items>
+            </SimpleBar>
+          </Sidebar>
+        </div>
       </div>
     </>
   );

@@ -1,167 +1,143 @@
-import {
-  IconHome,
-  IconPoint,
-  IconApps,
-  IconClipboard,
-  IconFileDescription,
-  IconBorderAll,
-  IconZoomCode,
-  IconRotate,
-  IconUserPlus,
-  IconLogin,
-  IconAlertCircle,
-  IconSettings,
-} from '@tabler/icons-react';
-import { uniqueId } from 'lodash';
+import { uniqueId } from "lodash";
 
 const Menuitems = [
   {
     id: uniqueId(),
-    title: 'Dashboard',
+    title: "Dashboard",
     icon: "solar:layers-line-duotone",
-    href: '',
+    href: "",
     children: [
       {
         id: uniqueId(),
-        title: "Sample Page",
-        icon: 'solar:widget-add-line-duotone',
+        title: "eCommerce",
+        icon: "solar:widget-add-line-duotone",
         href: "/",
       },
       {
         id: uniqueId(),
         title: "Analytics",
-        icon: 'solar:chart-line-duotone',
+        icon: "solar:chart-line-duotone",
         href: "/dashboards/analytics",
       },
       {
         id: uniqueId(),
         title: "CRM",
-        icon: 'solar:layers-line-duotone',
+        icon: "solar:layers-line-duotone",
         href: "/dashboards/crm",
       },
     ],
   },
   {
     id: uniqueId(),
-    title: 'Apps',
-    icon: 'solar:widget-line-duotone',
-    href: '',
+    title: "Apps",
+    icon: "solar:widget-line-duotone",
+    href: "",
     children: [
       {
         id: uniqueId(),
         title: "Contacts",
-        icon: 'solar:phone-line-duotone',
+        icon: "solar:phone-line-duotone",
         href: "/apps/contacts",
       },
       {
         id: uniqueId(),
         title: "Chats",
-        icon: 'solar:chat-round-line-line-duotone',
+        icon: "solar:chat-round-line-line-duotone",
         href: "/apps/chats",
       },
       {
         id: uniqueId(),
         title: "Notes",
-        icon: 'solar:document-text-line-duotone',
+        icon: "solar:document-text-line-duotone",
         href: "/apps/notes",
       },
       {
         id: uniqueId(),
         title: "Calendar",
-        icon: 'solar:calendar-mark-line-duotone',
+        icon: "solar:calendar-mark-line-duotone",
         href: "/apps/calendar",
       },
       {
         id: uniqueId(),
         title: "Email",
-        icon: 'solar:letter-line-duotone',
+        icon: "solar:letter-line-duotone",
         href: "/apps/email",
       },
       {
         id: uniqueId(),
         title: "Tickets",
-        icon: 'solar:ticker-star-outline',
+        icon: "solar:ticker-star-outline",
         href: "/apps/tickets",
       },
       {
         id: uniqueId(),
         title: "Kanban",
-        icon: 'solar:notebook-linear',
+        icon: "solar:notebook-linear",
         href: "/apps/kanban",
       },
       {
         id: uniqueId(),
-        title: 'User Profile',
-        icon: 'solar:shield-user-outline',
-        href: '',
+        title: "User Profile",
+        icon: "solar:shield-user-outline",
+        href: "",
         children: [
           {
             id: uniqueId(),
-            title: 'Profile',
-            icon: IconPoint,
-            href: '/apps/user-profile/profile',
+            title: "Profile",
+            href: "/apps/user-profile/profile",
           },
           {
             id: uniqueId(),
-            title: 'Followers',
-            icon: IconPoint,
-            href: '/apps/user-profile/followers',
+            title: "Followers",
+            href: "/apps/user-profile/followers",
           },
           {
             id: uniqueId(),
-            title: 'Friends',
-            icon: IconPoint,
-            href: '/apps/user-profile/friends',
+            title: "Friends",
+            href: "/apps/user-profile/friends",
           },
           {
             id: uniqueId(),
-            title: 'Gallery',
-            icon: IconPoint,
-            href: '/apps/user-profile/gallery',
+            title: "Gallery",
+            href: "/apps/user-profile/gallery",
           },
         ],
       },
       {
         id: uniqueId(),
-        title: 'Ecommerce',
-        icon: 'solar:document-text-line-duotone',
-        href: '',
+        title: "Ecommerce",
+        icon: "solar:document-text-line-duotone",
+        href: "",
         children: [
           {
             id: uniqueId(),
-            title: 'Shop',
-            icon: IconPoint,
-            href: '/apps/ecommerce/shop',
+            title: "Shop",
+            href: "/apps/ecommerce/shop",
           },
           {
             id: uniqueId(),
-            title: 'Detail',
-            icon: IconPoint,
-            href: '/apps/ecommerce/detail/1',
+            title: "Details",
+            href: "/apps/ecommerce/detail/1",
           },
           {
             id: uniqueId(),
-            title: 'List',
-            icon: IconPoint,
-            href: '/apps/ecommerce/list',
+            title: "List",
+            href: "/apps/ecommerce/list",
           },
           {
             id: uniqueId(),
-            title: 'Checkout',
-            icon: IconPoint,
-            href: '/apps/ecommerce/checkout',
+            title: "Checkout",
+            href: "/apps/ecommerce/checkout",
           },
           {
             id: uniqueId(),
-            title: 'Add Product',
-            icon: IconPoint,
-            href: '/apps/ecommerce/addproduct',
+            title: "Add Product",
+            href: "/apps/ecommerce/addproduct",
           },
           {
             id: uniqueId(),
-            title: 'Edit Product',
-            icon: IconPoint,
-            href: '/apps/ecommerce/editproduct',
+            title: "Edit Product",
+            href: "/apps/ecommerce/editproduct",
           },
         ],
       },
@@ -169,64 +145,57 @@ const Menuitems = [
         title: "Invoice",
         id: uniqueId(),
         icon: "solar:bill-check-outline",
-        href: '',
+        href: "",
         children: [
           {
             id: uniqueId(),
             title: "List",
-            icon: IconPoint,
-            href:"/apps/invoice/list",
+            href: "/apps/invoice/list",
           },
           {
             id: uniqueId(),
             title: "Details",
-            icon: IconPoint,
-            href:"/apps/invoice/detail/PineappleInc",
+            href: "/apps/invoice/detail/PineappleInc",
           },
           {
             id: uniqueId(),
             title: "Create",
-            icon: IconPoint,
-            href:"/apps/invoice/create",
+            href: "/apps/invoice/create",
           },
           {
             id: uniqueId(),
             title: "Edit",
-            icon: IconPoint,
-            href:"/apps/invoice/edit/PineappleInc",
+            href: "/apps/invoice/edit/PineappleInc",
           },
         ],
       },
       {
         id: uniqueId(),
-        title: 'Blog',
-        icon: 'solar:widget-add-line-duotone',
-        href: '/apps/blog/',
+        title: "Blogs",
+        icon: "solar:widget-add-line-duotone",
+        href: "/apps/blog/",
         children: [
           {
             id: uniqueId(),
-            title: 'Posts',
-            icon: IconPoint,
-            href: '/apps/blog/post',
+            title: "Blog Post",
+            href: "/apps/blog/post",
           },
           {
             id: uniqueId(),
-            title: 'Detail',
-            icon: IconPoint,
-            href: '/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow',
+            title: "Blog Detail",
+            href: "/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow",
           },
         ],
       },
     ],
   },
 
-
   {
     id: uniqueId(),
-    title: 'Ui Elements',
-    icon: 'solar:palette-round-line-duotone',
-    column:4,
-    href: '',
+    title: "Ui Elements",
+    icon: "solar:palette-round-line-duotone",
+    column: 4,
+    href: "",
     children: [
       {
         id: uniqueId(),
@@ -414,15 +383,121 @@ const Menuitems = [
         icon: "solar:text-bold-duotone",
         href: "/ui-components/typography",
       },
-      
     ],
   },
 
   {
     id: uniqueId(),
-    title: 'Pages',
-    icon: 'solar:book-outline',
-    href: '',
+    title: "Headless UI",
+    column: 4,
+    icon: "solar:text-underline-cross-broken",
+    href: "",
+    children: [
+      {
+        title: "Dropdown",
+        icon: "solar:round-alt-arrow-down-outline",
+        id: uniqueId(),
+        href: "/headless-ui/dropdown",
+      },
+      {
+        title: "Disclosure",
+        icon: "solar:accumulator-broken",
+        id: uniqueId(),
+        href: "/headless-ui/disclosure",
+      },
+      {
+        title: "Dialog",
+        icon: "solar:smartphone-update-line-duotone",
+        id: uniqueId(),
+        href: "/headless-ui/dialog",
+      },
+      {
+        title: "Popover",
+        icon: "solar:airbuds-case-charge-line-duotone",
+        id: uniqueId(),
+        href: "/headless-ui/popover",
+      },
+      {
+        title: "Tabs",
+        icon: "solar:clapperboard-text-linear",
+        id: uniqueId(),
+        href: "/headless-ui/tabs",
+      },
+      {
+        title: "Transition",
+        icon: "solar:round-transfer-horizontal-line-duotone",
+        id: uniqueId(),
+        href: "/headless-ui/transition",
+      },
+
+      {
+        id: uniqueId(),
+        title: "Buttons",
+        icon: "solar:adhesive-plaster-outline",
+        href: "/headless-form/buttons",
+      },
+      {
+        id: uniqueId(),
+        title: "Checkbox",
+        icon: "solar:check-circle-linear",
+        href: "/headless-form/checkbox",
+      },
+      {
+        id: uniqueId(),
+        title: "Combobox",
+        icon: "solar:archive-down-minimlistic-broken",
+        href: "/headless-form/combobox",
+      },
+      {
+        id: uniqueId(),
+        title: "Fieldset",
+        icon: "solar:password-minimalistic-input-outline",
+        href: "/headless-form/fieldset",
+      },
+      {
+        id: uniqueId(),
+        title: "Input",
+        icon: "solar:text-italic-circle-linear",
+        href: "/headless-form/input",
+      },
+      {
+        id: uniqueId(),
+        title: "Listbox",
+        icon: "solar:list-check-linear",
+        href: "/headless-form/listbox",
+      },
+      {
+        id: uniqueId(),
+        title: "Radio Group",
+        icon: "solar:round-graph-linear",
+        href: "/headless-form/radiogroup",
+      },
+      {
+        id: uniqueId(),
+        title: "Select",
+        icon: "solar:minimize-square-3-outline",
+        href: "/headless-form/select",
+      },
+      {
+        id: uniqueId(),
+        title: "Switch",
+        icon: "solar:branching-paths-down-outline",
+        href: "/headless-form/switch",
+      },
+      {
+        id: uniqueId(),
+        title: "Textarea",
+        icon: "solar:text-square-2-linear",
+        href: "/headless-form/textarea",
+      },
+    ],
+  },
+
+  {
+    id: uniqueId(),
+    title: "Pages",
+    icon: "solar:book-outline",
+    href: "",
     children: [
       {
         title: "Account Setting",
@@ -456,127 +531,148 @@ const Menuitems = [
       },
       {
         id: uniqueId(),
-        title: 'Widgets',
-        icon: 'solar:adhesive-plaster-outline',
-        href: '/widgets/cards',
+        title: "Widgets",
+        icon: "solar:adhesive-plaster-outline",
+        href: "/widgets/cards",
         children: [
           {
             id: uniqueId(),
-            title: 'Cards',
-            icon: IconPoint,
-            href: '/widgets/cards',
+            title: "Cards",
+            href: "/widgets/cards",
           },
           {
             id: uniqueId(),
-            title: 'Banners',
-            icon: IconPoint,
-            href: '/widgets/banners',
+            title: "Banners",
+            href: "/widgets/banners",
           },
           {
             id: uniqueId(),
-            title: 'Charts',
-            icon: IconPoint,
-            href: '/widgets/charts',
+            title: "Charts",
+            href: "/widgets/charts",
           },
         ],
       },
       {
         id: uniqueId(),
-        title: 'Auth',
-        icon: 'solar:lock-password-linear',
-        href: '/400',
+        title: "Auth",
+        icon: "solar:lock-password-linear",
+        href: "/400",
         children: [
           {
             id: uniqueId(),
-            title: 'Error',
-            icon: IconAlertCircle,
-            href: '/400',
-          },
-          {
-            id: uniqueId(),
-            title: 'Maintenance',
-            icon: IconSettings,
-            href: '/auth/maintenance',
-          },
-          {
-            id: uniqueId(),
-            title: 'Login',
-            icon: 'solar:key-square-line-duotone',
-            href: '/auth/auth1/login',
+            title: "Login",
+            icon: "solar:key-square-line-duotone",
+            href: "/auth/auth1/login",
             children: [
               {
                 id: uniqueId(),
-                title: 'Side Login',
-                icon: IconPoint,
-                href: '/auth/auth1/login',
+                title: "Side Login",
+
+                href: "/auth/auth1/login",
               },
               {
                 id: uniqueId(),
-                title: 'Boxed Login',
-                icon: IconPoint,
-                href: '/auth/auth2/login',
+                title: "Boxed Login",
+
+                href: "/auth/auth2/login",
               },
             ],
           },
           {
             id: uniqueId(),
-            title: 'Register',
-            icon: 'solar:user-check-rounded-broken',
-            href: '/auth/auth1/register',
+            title: "Register",
+            icon: "solar:user-check-rounded-broken",
+            href: "/auth/auth1/register",
             children: [
               {
                 id: uniqueId(),
-                title: 'Side Register',
-                icon: IconPoint,
-                href: '/auth/auth1/register',
+                title: "Side Register",
+
+                href: "/auth/auth1/register",
               },
               {
                 id: uniqueId(),
-                title: 'Boxed Register',
-                icon: IconPoint,
-                href: '/auth/auth2/register',
+                title: "Boxed Register",
+
+                href: "/auth/auth2/register",
               },
             ],
           },
           {
             id: uniqueId(),
-            title: 'Forgot Password',
-            icon: 'solar:shield-cross-broken',
-            href: '/auth/auth1/forgot-password',
+            title: "Forgot Password",
+            icon: "solar:shield-cross-broken",
+            href: "/auth/auth1/forgot-password",
             children: [
               {
                 id: uniqueId(),
-                title: 'Side Forgot Password',
-                icon: IconPoint,
-                href: '/auth/auth1/forgot-password',
+                title: "Side Forgot Pwd",
+
+                href: "/auth/auth1/forgot-password",
               },
               {
                 id: uniqueId(),
-                title: 'Boxed Forgot Password',
-                icon: IconPoint,
-                href: '/auth/auth2/forgot-password',
+                title: "Boxed Forgot Pwd",
+
+                href: "/auth/auth2/forgot-password",
               },
             ],
           },
           {
             id: uniqueId(),
-            title: 'Two Steps',
-            icon: 'solar:password-minimalistic-input-outline',
-            href: '/auth/auth1/two-steps',
+            title: "Two Steps",
+            icon: "solar:password-minimalistic-input-outline",
+            href: "/auth/auth1/two-steps",
             children: [
               {
                 id: uniqueId(),
-                title: 'Side Two Steps',
-                icon: IconPoint,
-                href: '/auth/auth1/two-steps',
+                title: "Side Two Steps",
+
+                href: "/auth/auth1/two-steps",
               },
               {
                 id: uniqueId(),
-                title: 'Boxed Two Steps',
-                icon: IconPoint,
-                href: '/auth/auth2/two-steps',
+                title: "Boxed Two Steps",
+
+                href: "/auth/auth2/two-steps",
               },
             ],
+          },
+          {
+            id: uniqueId(),
+            title: "Others",
+            icon: "solar:folder-error-linear",
+            href: "",
+            children: [
+              {
+                id: uniqueId(),
+                title: "Error",
+                href: "/auth/error",
+              },
+              {
+                id: uniqueId(),
+                title: "Maintenance",
+                href: "/auth/maintenance",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: uniqueId(),
+        title: "Icons",
+        icon: "solar:adhesive-plaster-outline",
+        href: "/icons",
+        children: [
+          {
+            id: uniqueId(),
+            title: "Solar Icons",
+            href: "/icons/solar",
+          },
+          {
+            id: uniqueId(),
+            title: "Tabler Icons",
+            href: "/icons/tabler",
           },
         ],
       },
@@ -584,11 +680,10 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: 'Forms',
-    icon: 'solar:file-text-linear',
-    href: '',
+    title: "Forms",
+    icon: "solar:file-text-linear",
+    href: "",
     children: [
-     
       {
         id: uniqueId(),
         title: "Forms Elements",
@@ -628,12 +723,11 @@ const Menuitems = [
     ],
   },
 
-
   {
     id: uniqueId(),
-    title: 'Charts',
-    icon: 'solar:chart-2-outline',
-    href: '/charts/',
+    title: "Charts",
+    icon: "solar:chart-2-outline",
+    href: "/charts/",
     children: [
       {
         title: "Line Chart",
@@ -680,12 +774,11 @@ const Menuitems = [
     ],
   },
 
-
   {
     id: uniqueId(),
-    title: 'Tables',
-    icon: 'solar:tuning-square-2-line-duotone',
-    href: '',
+    title: "Tables",
+    icon: "solar:tuning-square-2-line-duotone",
+    href: "",
     children: [
       {
         title: "Basic Tables",
@@ -715,7 +808,7 @@ const Menuitems = [
         id: uniqueId(),
         title: "React Tables",
         icon: "solar:calendar-add-broken",
-        href: "",
+        href: "/widgets/cards",
         children: [
           {
             id: uniqueId(),
@@ -777,10 +870,10 @@ const Menuitems = [
             title: "Expanding",
             href: "/react-tables/expanding",
           },
-          
         ],
       },
     ],
   },
+  
 ];
 export default Menuitems;

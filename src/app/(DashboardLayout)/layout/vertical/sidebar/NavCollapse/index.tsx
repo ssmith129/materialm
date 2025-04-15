@@ -21,10 +21,10 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item }: any) => {
   return (
     <>
       <Sidebar.Collapse
-        label={t(`${item.name}`)}
+        label={t(`${item.name}`)} 
         open={activeDD ? true : false}
         icon={() => <Icon icon={item.icon} height={18} />}
-        className={activeDD ? '!text-primary bg-lightprimary ' : ''}
+        className={`${activeDD ? '!text-primary bg-lightprimary ' : ''} collapse-menu`}
         renderChevronIcon={(theme, open) => {
           const IconComponent = open
             ? HiOutlineChevronDown
@@ -32,7 +32,7 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item }: any) => {
           return (
             <IconComponent
               aria-hidden
-              className={twMerge(theme.label.icon.open[open ? "on" : "off"])}
+              className={`${twMerge(theme.label.icon.open[open ? "on" : "off"])} drop-icon`}
             />
           );
         }}

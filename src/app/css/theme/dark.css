@@ -65,12 +65,3 @@
 .dark ::-webkit-calendar-picker-indicator {
     filter: invert(1);
   }
-
-  .dark .miniicons [data-testid="flowbite-tooltip"] {
-    width: max-content;
-    background-color: var(--color-primary);
-}
-
-.dark .miniicons [data-testid="flowbite-tooltip-arrow"] {
-    background-color: var(--color-primary);
-}

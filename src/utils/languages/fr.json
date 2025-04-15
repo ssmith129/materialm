@@ -38,6 +38,7 @@
   "Banners": "Bannières",
   "Charts": "Graphiques",
 
+  "Ui Elements": "Éléments de l'interface utilisateur",
   "Accordian": "Accordéon",
   "Badge": "Badge",
   "Button": "Bouton",
@@ -120,6 +121,7 @@
   "Auth": "Authentification",
   "Others": "Autres",
 
+  "Icons": "Icônes",
   "Solar Icons": "Icônes solaires",
   "Tabler Icons": "Tabler Icons",
 
@@ -137,19 +139,19 @@
   "Switch": "Changer",
   "Textarea": "Zone de texte",
   "Combobox": "Liste déroulante",
+  "Form Elements":"Éléments de formulaire",
 
-  
   "React Tables": "Tableaux de réaction",
   "Basic": "Basique",
   "Dense": "Dense",
   "Sorting": "Tri",
   "Filtering": "Filtration",
-  "Row Selection":"Sélection de ligne",
-  "Column Visibility":"Visibilité des colonnes",
-  "Editable":"Modifiable",
-  "Sticky":"Collant",
-  "Drag & Drop":"Glisser-déposer",
-  "Empty":"Vide",
-  "Expanding":"Expansion",
-  "Umbrella":"Parapluie"
+  "Row Selection": "Sélection de ligne",
+  "Column Visibility": "Visibilité des colonnes",
+  "Editable": "Modifiable",
+  "Sticky": "Collant",
+  "Drag & Drop": "Glisser-déposer",
+  "Empty": "Vide",
+  "Expanding": "Expansion",
+  "Umbrella": "Parapluie"
 }

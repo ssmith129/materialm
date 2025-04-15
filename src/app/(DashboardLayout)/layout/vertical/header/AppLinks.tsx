@@ -27,7 +27,7 @@ const AppLinks = () => {
           <Icon icon="solar:widget-3-line-duotone" height={20} />
         </span>
 
-        <div className="sm:w-[900px] w-screen dropdown  invisible  group-hover:visible absolute z-[10]">
+        <div className="sm:w-[900px] w-screen dropdown  invisible  group-hover:visible absolute">
           <Drawer
             open={isOpen}
             onClose={handleClose}

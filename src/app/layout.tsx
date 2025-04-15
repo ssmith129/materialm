@@ -7,7 +7,6 @@ import customTheme from "@/utils/theme/custom-theme";
 import { CustomizerContextProvider } from "@/app/context/customizerContext";
 import "./api/index"
 import '../utils/i18n';
-
 const inter = Inter({ subsets: ["latin"] });
 
 
